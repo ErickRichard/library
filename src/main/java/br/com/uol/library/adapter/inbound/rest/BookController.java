@@ -6,6 +6,7 @@ import br.com.uol.library.application.dto.response.BookResponse;
 import br.com.uol.library.application.port.BookServicePort;
 import br.com.uol.library.domain.common.utils.api.ApiResponseCreated;
 import br.com.uol.library.domain.common.utils.api.ApiResponseSuccess;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("v1/books")
+@Tag(name = "Books")
 public class BookController extends BaseController {
 
     @Autowired
