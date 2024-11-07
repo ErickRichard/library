@@ -1,4 +1,4 @@
-package br.com.uol.library.domain.common.utils;
+package br.com.uol.library.domain.common.utils.api;
 
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -13,10 +13,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Default Success Response", content = @Content(mediaType = "application/json")),
-        @ApiResponse(responseCode = "500", description = "Default Error Response", content = @Content)
+        @ApiResponse(responseCode = "400", description = "Bad Request - Invalid Parameters", content = @Content(mediaType = "application/json")),
+        @ApiResponse(responseCode = "500", description = "Internal Server Error", content = @Content(mediaType = "application/json"))
 })
-public @interface ApiResponseWrapper {
+public @interface ApiResponseSuccess {
     String successDescription() default "Success";
-    String errorDescription() default "Error";
-    String mediaType() default "application/json";
+    String errorDescription() default "Bad Request - Invalid Parameters";
 }
