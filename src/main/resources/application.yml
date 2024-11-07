@@ -9,7 +9,7 @@ spring:
     modules-to-install:
       - com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
   datasource:
-    url: jdbc:postgresql://localhost:5432/compass
+    url: jdbc:postgresql://localhost:5432/library
     username: postgres
     password: 1234567
     driver-class-name: org.postgresql.Driver
