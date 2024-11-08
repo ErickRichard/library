@@ -11,7 +11,7 @@ import java.util.UUID;
 public interface AuthorServicePort {
     List<AuthorResponse> findAll();
     AuthorResponse findById(UUID id);
-    AuthorResponse save(@Valid AuthorRequest authorRequest);
+    AuthorResponse save(AuthorRequest authorRequest);
     AuthorResponse update(AuthorUpdateRequest authorUpdateRequest);
     void delete(UUID id);
 }
