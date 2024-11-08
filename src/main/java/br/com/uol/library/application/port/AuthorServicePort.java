@@ -3,7 +3,6 @@ package br.com.uol.library.application.port;
 import br.com.uol.library.application.dto.request.AuthorRequest;
 import br.com.uol.library.application.dto.request.AuthorUpdateRequest;
 import br.com.uol.library.application.dto.response.AuthorResponse;
-import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.UUID;
